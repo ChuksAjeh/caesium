@@ -10,22 +10,20 @@ include(cmake/CPM.cmake)                      # defines CPMAddPackage()
 CPMAddPackage("gh:google/googletest@1.18.0")
 include(GoogleTest)                           # defines gtest_discover_tests()
 
-add_library(mp_warnings INTERFACE)
+add_library(mp_warnings INTERFACE
+        replay/src/reconciler.cpp)
 target_compile_options(mp_warnings INTERFACE -Wall -Wextra -Werror)
 
 enable_testing()                       # must come before any add_test/GoogleTest
-
-add_executable(marketpulse main.cpp
-        book/src/order_book.cpp)
-
+add_subdirectory(apps)
 add_subdirectory(book)
-#add_subdirectory(match)
-#add_subdirectory(replay)
-#add_subdirectory(protocol)
-#add_subdirectory(gateway)
-#add_subdirectory(instrument)
-#add_subdirectory(loadgen)
-#add_subdirectory(bench)
-#add_subdirectory(alloc)
-#add_subdirectory(concurrent)
-#add_subdirectory(ipc)
+add_subdirectory(match)
+add_subdirectory(replay)
+add_subdirectory(protocol)
+add_subdirectory(gateway)
+add_subdirectory(instrument)
+add_subdirectory(loadgen)
+add_subdirectory(bench)
+add_subdirectory(alloc)
+add_subdirectory(concurrent)
+add_subdirectory(ipc)

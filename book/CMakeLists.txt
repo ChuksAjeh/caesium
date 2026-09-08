@@ -1,4 +1,5 @@
 add_library(book
+        STATIC
         src/order_book.cpp
 )
 add_library(marketpulse::book ALIAS book)
