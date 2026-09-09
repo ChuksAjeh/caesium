@@ -8,13 +8,16 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)  # clang-tidy and clangd read this
 
 include(cmake/CPM.cmake)                      # defines CPMAddPackage()
 CPMAddPackage("gh:google/googletest@1.18.0")
+set(BENCHMARK_ENABLE_TESTING OFF)
+CPMAddPackage("gh:google/benchmark@1.9.5")
+
 include(GoogleTest)                           # defines gtest_discover_tests()
 
-add_library(mp_warnings INTERFACE
-        replay/src/reconciler.cpp)
+add_library(mp_warnings INTERFACE )
 target_compile_options(mp_warnings INTERFACE -Wall -Wextra -Werror)
 
-enable_testing()                       # must come before any add_test/GoogleTest
+enable_testing()
+add_subdirectory(decoder)
 add_subdirectory(apps)
 add_subdirectory(book)
 add_subdirectory(match)
