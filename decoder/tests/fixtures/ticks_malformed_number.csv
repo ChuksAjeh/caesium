@@ -1,0 +1,5 @@
+timestamp,symbol,side,price,size
+09:30:00.125,AAPL,B,316.10,100
+09:30:00.341,AAPL,S,31X.12,250
+09:30:01.002,AAPL,B,316.11,fifty
+09:30:02.115,AAPL,S,316.15,75
