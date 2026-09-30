@@ -10,7 +10,7 @@ an order book, a matching engine, replay and benchmarking) and document what I l
 - **clang-format** / **clang-tidy** for formatting and linting
 
 ## Project layout
-Each top-level folder is its own CMake module:
+Each top-level folder has its own CMake module:
 
 | Module | Purpose |
 |---|---|
