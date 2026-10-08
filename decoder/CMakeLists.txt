@@ -3,7 +3,7 @@ add_library(decoder
         src/csv_reader.cpp
         tools/decoder_cli.cpp
 )
-add_library(marketpulse::decoder ALIAS decoder)
+add_library(caesium::decoder ALIAS decoder)
 
 target_include_directories(decoder PUBLIC include)
 target_link_libraries(decoder PRIVATE mp_warnings)
@@ -14,7 +14,7 @@ add_executable(decoder_cli
 
 target_link_libraries(decoder_cli
         PRIVATE
-        marketpulse::decoder
+        caesium::decoder
         mp_warnings
 )
 add_executable(decoder_tests
@@ -23,7 +23,7 @@ add_executable(decoder_tests
 
 target_link_libraries(decoder_tests
         PRIVATE
-        marketpulse::decoder
+        caesium::decoder
         GTest::gtest_main
         mp_warnings
 )
