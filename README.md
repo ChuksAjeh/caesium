@@ -1,4 +1,4 @@
-# MarketPulse
+# Caesium
 
 A learning project for relearning modern C++ (up to C++20) through the lens of trading systems.
 The goal is to build the pieces of a small trading stack from scratch (market-data decoding,
@@ -15,7 +15,7 @@ Each top-level folder has its own CMake module:
 | Module | Purpose |
 |---|---|
 | `decoder/` | Reads and parses tick data (CSV). Library, CLI tool and tests |
-| `apps/` | Main `marketpulse` executable |
+| `apps/` | Main `caesium` executable |
 | `bench/` | Google Benchmark micro-benchmarks |
 | `book/`, `match/`, `replay/`, `protocol/`, `gateway/`, `instrument/`, `loadgen/`, `alloc/`, `concurrent/`, `ipc/` | Planned modules (work in progress) |
 
