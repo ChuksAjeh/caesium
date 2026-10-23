@@ -9,25 +9,20 @@
 #include <string>
 #include <vector>
 
-
-//This file reads csv files and outputs the data
-void read_csv_file(const std::string& file_path)
-{
-    if (file_path.empty())
-    {
+// This file reads csv files and outputs the data
+void CSVReader::read_csv_file(const std::string &file_path) {
+    if (file_path.empty()) {
         std::cerr << "Error: File path is empty." << '\n';
         return;
     }
     std::ifstream file(file_path);
-    if (!file.is_open())
-    {
+    if (!file.is_open()) {
         std::cerr << "Error: Unable to open file." << '\n';
         return;
     }
 
     std::string header_line;
-    if (!std::getline(file, header_line))
-    {
+    if (!std::getline(file, header_line)) {
         std::cerr << "Error: File is empty, no header found." << '\n';
         return;
     }
@@ -39,13 +34,11 @@ void read_csv_file(const std::string& file_path)
     std::vector<std::string> headers;
     std::stringstream header_stream(header_line);
     std::string column;
-    while (std::getline(header_stream, column, ','))
-    {
+    while (std::getline(header_stream, column, ',')) {
         headers.push_back(column);
     }
 
-    for (const auto& header : headers)
-    {
+    for (const auto &header : headers) {
         std::cout << header << '\n';
     }
 }
