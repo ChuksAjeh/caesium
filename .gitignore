@@ -70,3 +70,5 @@ Testing/
 
 /*.idea/
 .idea/*
+# CLion build dirs
+cmake-build-*/
