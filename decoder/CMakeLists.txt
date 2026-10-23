@@ -2,6 +2,7 @@ add_library(decoder
         STATIC
         src/csv_reader.cpp
         tools/decoder_cli.cpp
+        include/caesium/decoder/csv_reader.h
 )
 add_library(caesium::decoder ALIAS decoder)
 
@@ -10,6 +11,7 @@ target_link_libraries(decoder PRIVATE mp_warnings)
 
 add_executable(decoder_cli
         tools/decoder_cli.cpp
+        include/caesium/decoder/csv_reader.h
 )
 
 target_link_libraries(decoder_cli
@@ -19,6 +21,7 @@ target_link_libraries(decoder_cli
 )
 add_executable(decoder_tests
         tests/csv_reader_test.cpp
+        include/caesium/decoder/csv_reader.h
 )
 
 target_link_libraries(decoder_tests
