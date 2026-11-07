@@ -72,3 +72,8 @@ Testing/
 .idea/*
 # CLion build dirs
 cmake-build-*/
+
+# Downloaded market data (fetch with data/fetch/*.sh)
+/data/*
+!/data/fetch/
+!/data/README.md
