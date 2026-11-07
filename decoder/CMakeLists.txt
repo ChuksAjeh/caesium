@@ -1,4 +1,7 @@
-add_library(decoder STATIC src/csv_reader.cpp)          # no decoder_cli.cpp here
+add_library(decoder STATIC src/csv_reader.cpp
+        include/caesium/decoder/csv_writer.h
+        src/csv_writer.cpp
+)          # no decoder_cli.cpp here
 add_library(caesium::decoder ALIAS decoder)
 target_include_directories(decoder PUBLIC include)
 target_link_libraries(decoder PRIVATE mp_warnings)
