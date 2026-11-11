@@ -38,7 +38,7 @@ struct Trade {
  * If this fires, a change has broken that, e.g. adding a std::string
  * member or a virtual function. Fix the change; don't remove the assert.
  */
-static_asserintet(std::is_trivially_copyable_v<Trade>,
+static_assert(std::is_trivially_copyable_v<Trade>,
               "Trade must be trivially copyable");
 
 } // namespace caesium::model
