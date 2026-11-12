@@ -21,7 +21,7 @@ Each top-level folder has its own CMake module:
 
 | Module                                                                                                            | Purpose                                                       |
 |-------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| `decoder/`                                                                                                        | Reads and parses tick data (CSV). Library, CLI tool and tests |
+| `ingest`                                                                                                        | Reads and parses tick data (CSV). Library, CLI tool and tests |
 | `apps/`                                                                                                           | Main `caesium` executable                                     |
 | `bench/`                                                                                                          | Google Benchmark micro-benchmarks                             |
 | `book/`, `match/`, `replay/`, `protocol/`, `gateway/`, `instrument/`, `loadgen/`, `alloc/`, `concurrent/`, `ipc/` | Planned modules (work in progress)                            |
