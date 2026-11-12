@@ -4,7 +4,8 @@ add_library(ingest STATIC
 )
 add_library(caesium::ingest ALIAS ingest)
 target_include_directories(ingest PUBLIC include)
-target_link_libraries(ingest PRIVATE mp_warnings)
+# PUBLIC: the reader's header uses model types, so consumers need them too.
+target_link_libraries(ingest PUBLIC caesium::model PRIVATE mp_warnings)
 
 add_executable(ingest_tests tests/ingest_test.cpp)
 target_link_libraries(ingest_tests PRIVATE caesium::ingest GTest::gtest_main mp_warnings)

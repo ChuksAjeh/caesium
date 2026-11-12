@@ -2,9 +2,20 @@
 // Created by chuks on 08/11/2026.
 //
 
-#ifndef CAESIUM_INGEST_H
-#define CAESIUM_INGEST_H
+#ifndef CAESIUM_INGEST_BINANCE_TRADE_READER_H
+#define CAESIUM_INGEST_BINANCE_TRADE_READER_H
 
-class ingest {};
+#include "caesium/model/trade.h"
+#include <string>
 
-#endif // CAESIUM_INGEST_H
+namespace caesium::ingest {
+class BinanceTraderReader {
+  private:
+    std::string file_path;
+
+  public:
+    void read_file();
+    void try_read_file();
+};
+} // namespace caesium::ingest
+#endif // CAESIUM_INGEST_BINANCE_TRADE_READER_H
