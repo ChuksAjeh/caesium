@@ -34,3 +34,13 @@ My learnings are tracked as dated devlogs in
 - [09/09/2026: Initial project and toolchain setup](docs/devlogs/devlog-09-09-2026.md)
 - [26/09/2026: Test data, decoder CLI and unit tests](docs/devlogs/devlog-26-09-2026.md)
 - [24/10/2026: Implementing the CSV parser](docs/devlogs/devlog-24-10-2026.md)
+
+## AI disclosure
+
+The C++ in this repository is written by me. For this
+project, AI has been used for the following:
+
+- Checking the project structure
+- As a rubber duck, alongside the documentation
+- Flagging potential bugs and optional "even better ifs"
+- Scaffolding, such as the READMEs and the devlog setup
